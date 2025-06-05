@@ -29,7 +29,7 @@ When describing the characteristics TRE archetypes it is useful to use the conce
 In addition to the zones above taken from the [DARE Federated Architecture](https://github.com/DAREUK/tre-federation/blob/main/architecture/4_Infrastructure_Layer/4_3_1_TRE.md) we propose 2 additional zones:
 
 #### Orchestration Zone (OZ)
-This zone manages the deployment and maintenance of infrastructure and the configuration of the TRE. This zone contains no research data and Shall not be accessible to any researcher role. [Infrastructure management roles](https://satre-specification.readthedocs.io/en/stable/roles.html#infrastructure-management-roles) own and operate within this zone.
+This zone manages the deployment and maintenance of infrastructure and the configuration of the TRE. This zone contains no research data and Shall not be accessible to any researcher/project role. [Infrastructure management roles](https://satre-specification.readthedocs.io/en/stable/roles.html#infrastructure-management-roles) own and operate within this zone.
 
  In the case of a "Infrastructure as Code" TRE some proportion of this zone may sit in an external platform used to manage a Git repository.
 
