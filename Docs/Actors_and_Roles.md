@@ -155,7 +155,7 @@ From section [Roles in SATRE spec v1.0.0](https://satre-specification.readthedoc
  * Not all actors and roles from [[3]](#ref-3) are currently represented below.
  * "Information Governance" was originally an actor in both [[1]](#ref-1) and [[3]](#ref-3). We remodel it as a role.
  * We regard "Researcher" and "Data Consumer" as synonyms and use the former as the principal user actor.
- * We regard "Project Team" as a collective for "Project Member" and use the latter as the anme for the specific role.
+ * We regard "Project Team" as a collective for "Project Member" and use the latter as the name for the specific role.
 
 ![Actors and roles](Images/TRE_Actors_Roles.drawio.png)
 
