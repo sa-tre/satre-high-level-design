@@ -2,13 +2,11 @@
 
 **FRIDGE: Federated Research Infrastructure by Data Governance Extension**
 
-Artificial Intelligence (AI) models can help enhance research to solve complex problems in society, but this requires access to sensitive data on large-scale, shared AI supercomputers, like the UK’s AI Research Resource (AIRR).
+Artificial Intelligence (AI) models can help enhance research to solve complex problems in society, but this requires access to sensitive data on large-scale, shared AI supercomputers, like the UK’s AI Research Resource (AIRR). FRIDGE will leverage the compute capacity provided by AI supercomputers by extending the security management system from a primary of "Front Door" TRE onto these facilities.
 
 ## 1. Purpose
 
-Using sensitive data to develop AI models involves carefully isolating parts of large AI supercomputers as Trusted Research Environments (TREs) so that only approved researchers can safely access them for their research. FRIDGE aims to explore this possibility by creating a ready-to-use TRE that meets the SATRE specification (developed as part of the DARE UK Phase 1 Driver Projects and enhanced by TREvolution) on the AIRR. This will enable the secure use of sensitive data to develop AI models for research that benefits the public while ensuring strict information governance.
-
-By establishing a robust governance framework, FRIDGE will enable AIRR to host secure TREs, ensuring that large-scale AI research can operate within secure, compliant environments and providing a testbed for other TREvolution capabilities.
+Using sensitive data to develop AI models involves carefully isolating parts of large AI supercomputers as Trusted Research Environments (TREs) so that only approved researchers can safely access them for their research. FRIDGE aims to explore this possibility by creating a ready-to-use TRE that meets the [SATRE specification](https://satre-specification.readthedocs.io/en/stable/) (developed as part of the DARE UK Phase 1 Driver Projects and enhanced by TREvolution) on the AIRR. This will enable the secure use of sensitive data to develop AI models for research that benefits the public while ensuring strict information governance.
 
 This document sets out the high-level architecture for this extended governance in order to clearly distinguish between areas of responsibilities and provide a framework for the federated computation delivered by FRIDGE.
 
@@ -19,9 +17,9 @@ This document sets out the high-level architecture for this extended governance 
 The above view shows the highest-level architecture for FRIDGE consisting of:
 
 - A front door TRE where the researcher operates. There is an interface TRE software for analysis and research data. The front door TRE will provide the capabilities and contain components found in the [SATRE Architecture](https://satre-specification.readthedocs.io/en/stable/architecture.html).
-- A FRIDGE TRE where large scale AI research is worked on. Within the FRIDGE TRE there is a job processor, super computing hardware (AI) to provide compute capacity and an analysis-ready copy of the research data.
+- A FRIDGE TRE where large scale AI compute is available. Within the FRIDGE TRE there is a job processor, super computing hardware (AI) and an analysis-ready copy of the research data.
 
-The researcher works within the front door TRE and submits jobs and receives results from the FRIDGE TRE. 
+The researcher works within the front door TRE and, if they have the job submitter role, can send jobs to and receives results from the FRIDGE TRE. 
 
 ## 2. Roles
 
@@ -41,17 +39,17 @@ Roles Catalogue
 
 ## 2. Boundaries
 
-The figure below shows the external boundary FRIDGE and internal boundaries between component parts of the system.
+The figure below shows the external boundaries for the extended governance of FRIDGE and the internal boundaries between component parts of the system.
 
 ![FRIDGE Boundaries](./FRIDGE_Images/Fridge_Boundaries.drawio.svg)
 
 ### 2.1 Governance Boundary
 
-**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and possibly commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require changes to the information governance framework as shown below.
+**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require [changes to the information governance](FRIDGE_Governance_Extension_Architecture.md#3-governance-of-the-fridge-federation) framework as shown below.
 
-## 2.2 Front Door TRE Hosting Boundary
+### 2.2 Front Door TRE Hosting Boundary
 
-**The hosting organisation (Public or Private Cloud) is accountable for the TRE Hosting Boundary**. The TRE hosting boundary ensures for the "Security of the Cloud" and therefore responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities. See [AWS](https://aws.amazon.com/compliance/shared-responsibility-model/), [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility), [GCP](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate) for public cloud. UCL's TRE on private cloud supports a similar [shared responsibility model](https://isms.arc.ucl.ac.uk/rism02-roles_and_responsibilities/#6shared-responsibility-model) with the private cloud being part of the "UCL supporting Services".
+**The hosting organisation (Public or Private Cloud) is accountable for the TRE Hosting Boundary**. The TRE hosting boundary ensures the security of the underlying cloud platform hosting the TRE. The hosting org is therefore responsible for protecting the infrastructure that runs all of the cloud services. This infrastructure is composed of the hardware, software, networking, and facilities. See [AWS](https://aws.amazon.com/compliance/shared-responsibility-model/), [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility), [GCP](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate) for public cloud. UCL's TRE on private cloud supports a similar [shared responsibility model](https://isms.arc.ucl.ac.uk/rism02-roles_and_responsibilities/#6shared-responsibility-model) with the private cloud being part of the "UCL supporting Services".
 
 ### 2.3 Front Door TRE Boundary
 
@@ -59,11 +57,13 @@ The figure below shows the external boundary FRIDGE and internal boundaries betw
 
 ### 2.4 TRE Project Boundary
 
-**The Project boundary responsibility is shared between the TRE operator organisation and the Information Asset Owner**. Applicable technical controls as documented in the [Computing Technology and Information Security pillar of SATRE](https://satre-specification.readthedocs.io/en/stable/pillars/computing_technology.html#computing-technology-and-information-security) are the responsibility of the TRE operator organisation. Controls within the Information Governance pillar of SATRE will largely be the responsibility of the Information Asset Owner.
+**The Project boundary responsibility is shared between the TRE operator organisation and the Information Asset Owner**. Applicable technical controls as documented in the [Computing Technology and Information Security pillar](https://satre-specification.readthedocs.io/en/stable/pillars/computing_technology.html#computing-technology-and-information-security) of SATRE are the responsibility of the TRE operator organisation. Controls within the Information Governance pillar of SATRE will largely be the responsibility of the Information Asset Owner.
 
 The degree to which these controls are delegated down to research teams themselves will be dependant on the ["TRE Archetype"](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md). [Data provider archetypes](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md#21-data-provider-archetype) will take a much greater role in ensuring the security of the project boundary as they are the TRE platform and data provider. [Bring your own data archetype](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md#22-bring-your-own-data-archetype) operators delegate the security fo the project down to the the project team (usually a primary investigator).
 
 ### 2.5 FRIDGE TRE Hosting Boundary
+
+<!--Need to add-->
 
 ### 2.6 FRIDGE TRE Boundary
 
@@ -76,7 +76,11 @@ The TRE operator is responsible for defining the requirements for resource alloc
 
 ### 2.7 Code Repository Boundary
 
+<!--Need to add-->
+
 ### 2.8 Private Network Boundary
+
+<!--Need to add-->
 
 ## 3. Governance of the FRIDGE Federation
 
