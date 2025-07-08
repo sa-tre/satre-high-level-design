@@ -14,7 +14,7 @@ This document sets out the high-level architecture for this extended governance 
 
 ## 2. FRIDGE Architecture
 
-[Zoomed Out Architecture](./FRIDGE_Images/Fridge_Zoomed_Out.drawio.svg)
+![Zoomed Out Architecture](./FRIDGE_Images/Fridge_Zoomed_Out.drawio.svg)
 
 The above view shows the highest-level architecture for FRIDGE consisting of:
 
