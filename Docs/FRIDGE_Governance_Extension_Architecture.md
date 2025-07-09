@@ -45,11 +45,14 @@ The figure below shows the external boundaries for the extended governance of FR
 
 ### 2.1 Governance Boundary
 
-**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require [changes to the information governance](FRIDGE_Governance_Extension_Architecture.md#3-governance-of-the-fridge-federation) framework as shown below.
+**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require [changes to the information governance framework](FRIDGE_Governance_Extension_Architecture.md#3-governance-of-the-fridge-federation) as shown below.
+
 
 ### 2.2 Front Door TRE Hosting Boundary
 
 **The hosting organisation (Public or Private Cloud) is accountable for the TRE Hosting Boundary**. The TRE hosting boundary ensures the security of the underlying cloud platform hosting the TRE. The hosting org is therefore responsible for protecting the infrastructure that runs all of the cloud services. This infrastructure is composed of the hardware, software, networking, and facilities. See [AWS](https://aws.amazon.com/compliance/shared-responsibility-model/), [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility), [GCP](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate) for public cloud. UCL's TRE on private cloud supports a similar [shared responsibility model](https://isms.arc.ucl.ac.uk/rism02-roles_and_responsibilities/#6shared-responsibility-model) with the private cloud being part of the "UCL supporting Services".
+
+
 
 ### 2.3 Front Door TRE Boundary
 
@@ -67,7 +70,11 @@ The degree to which these controls are delegated down to research teams themselv
 
 ### 2.6 FRIDGE TRE Boundary
 
-**The FRIDGE TRE boundary responsibility is shared between the TRE operator and the FRIDGE Hosting Organisation.** Information and data, accounts and identity, encryption and applications are the responsibility of the TRE organisation with network controls and resource allocation shared between the TRE operator and the FRIDGE hosting organisation.
+**The FRIDGE TRE boundary responsibility is shared between the TRE operator and the FRIDGE Hosting Organisation.** 
+
+Only part of the hosting organisation is within the governance boundary and therefore the TRE(s) inherit residual risk from the hosting organisation. Where there are shared components additional controls must be applied by the TRE operator organisation. For example encryption applied and managed by the TRE operator organisation applied to shared storage.
+
+Information and data, accounts and identity, encryption and applications are the responsibility of the TRE organisation with network controls and resource allocation shared between the TRE operator and the FRIDGE hosting organisation.
 
 ![FRIDGE TRE Boundary Shared Responsibility Model](./FRIDGE_Images/Fridge_Shared_Responsibility_Model.drawio.svg)
 
