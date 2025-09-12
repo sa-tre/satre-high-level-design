@@ -4,4 +4,5 @@ This repository contains design artifacts which are drafted outside of the core 
 
 ## Contents
 
-1. [Archetypes](./Docs/TRE_Architypes.md)
+### [1. Patterns](./Docs/patterns/)
+### [2. Designs](./Docs/designs/)
