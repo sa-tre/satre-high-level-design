@@ -49,13 +49,13 @@ There are two TRE archetypes in use across the community of providers in the UK.
 
 The first is most commonly operated by a single data provider, providing the data and the environment for researchers to use for analysis. Examples of such TREs include the NHS SDEs, ONS secure research service and the UKDS SecureLab. Such TREs generally provide a curated data set to researchers and a secure environment to work within. These TRE providers have greater responsibility for ensuring all 5 of the 5 Safes including Safe Data (e.g. de-identification of source data sets and curated extracts) and Safe Outputs (e.g. providing output checking service).
 
-![Data Provider](../Docs/Images/Data_Provider.drawio.svg)
+![Data Provider](../Images/Data_Provider.drawio.svg)
 
 The TRE operator is responsible for management of data and access to curated data sets for researchers. Curated data may be extracted and copied or access provided through other means. Safe Outputs from the environment remain under the control of the TRE operator.
 
 #### Data provider archetype shared responsibility model
 
-![Data Provider](../Docs/Images/Shared_Responsibility_Model_DataProvider.png)
+![Data Provider](../Images/Shared_Responsibility_Model_DataProvider.png)
 
 ### 2.2. Bring Your Own Data Archetype
 
@@ -63,13 +63,13 @@ The second archetype is commonly used in Universities and operates under a “br
 
 In such TREs the TRE provider (often research IT within the university) is only responsible for the safe setting. The wider organization is responsible for the other 4 safes with these usually delegated in part to the research teams themselves. Examples of such TREs are UCL ARC TRE, Turing Data Safe Haven and Kings College’s CREATE platform.
 
-![Bring Your Own Data](../Docs/Images/Bring_your_Own_Data.drawio.svg)
+![Bring Your Own Data](../Images/Bring_your_Own_Data.drawio.svg)
 
 The project boundary spans both the secure data and research analytics zones. An information asset owner is accountable for the management of the source data and any extracts. Safe Outputs from the environment may also be under the control of the asset administrator or their delegate.
 
 #### Bring your own data shared responsibility model
 
-![BYO-data responsibility model](../Docs/Images/Shared_Responsibility_Model_BYOD.png)
+![BYO-data responsibility model](../Images/Shared_Responsibility_Model_BYOD.png)
 
 
 
