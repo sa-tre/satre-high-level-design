@@ -5,8 +5,8 @@ Across the UK there are a wide variety of TREs. the SATRE [architecture and spec
 
 The following patterns describe the two primary TRE provider archetypes including the variation in the roles and responsibilities of each.
 
-1. Data Provider archetype
-2. Bring your own data archetype
+1. [Data Provider archetype](./TRE_architypes.md#3-pattern-1---data-provider-archetype)
+2. [Bring your own data archetype](./TRE_architypes.md#4-pattern-2---bring-your-own-data-archetype)
 
 ## 2. Definitions
 
@@ -17,7 +17,7 @@ Definition of zones will be added to the [UK TRE glossary](https://glossary.uktr
 
 The first is most commonly owner by a single data provider, providing the data and the environment for researchers to use for analysis. Examples of such TREs include the NHS SDEs, ONS secure research service and the UKDS SecureLab. Such TREs generally provide a curated data set to researchers and a secure environment to work within. These TRE providers have greater responsibility for ensuring all 5 of the 5 Safes including Safe Data (e.g. de-identification of source data sets and curated extracts) and Safe Outputs (e.g. providing output checking service).
 
-![data provider archetype](/Docs/Images/Data_Provider.drawio.svg)
+![data provider archetype](/Docs/Images/Data_Provider.drawio.svg)<br>
 *The project boundary only exists within the research analytics zone.*
 
 
@@ -32,7 +32,7 @@ The second archetype is commonly used in Universities and operates under a “br
 
 In such TREs the TRE provider (often research IT within the university) is only responsible for the safe setting. The wider organization is responsible for the other 4 safes with these usually delegated in part to the research teams themselves. Examples of such TREs are UCL ARC TRE, Turing Data Safe Haven and Kings College’s CREATE platform.
 
-![bring your own data archetype](/Docs/Images/Bring_your_Own_Data.drawio.svg)
+![bring your own data archetype](/Docs/Images/Bring_your_Own_Data.drawio.svg)<br>
 *The project boundary spans both the secure data and research analytics zones.* 
 
 ### Responsibility Model
