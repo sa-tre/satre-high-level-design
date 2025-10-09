@@ -157,5 +157,5 @@ From section [Roles in SATRE spec v1.0.0](https://satre-specification.readthedoc
  * We regard "Researcher" and "Data Consumer" as synonyms and use the former as the principal user actor.
  * We regard "Project Team" as a collective for "Project Member" and use the latter as the name for the specific role.
 
-![Actors and roles](Images/TRE_Actors_Roles.drawio.png)
+![Actors and roles](../Images/TRE_Actors_Roles.drawio.png)
 
