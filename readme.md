@@ -6,3 +6,4 @@ This repository contains design artifacts which are drafted outside of the core 
 
 ### [1. Patterns](./Docs/patterns/)
 ### [2. Designs](./Docs/designs/)
+### [3. Roles](.Docs/roles/)
